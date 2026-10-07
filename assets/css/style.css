@@ -1,11 +1,11 @@
-*{
-  margin:0;
-  border:0;
+* {
+  margin: 0;
+  border: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --color-fondo: #006d46;
   --color-borde: #004d31;
   --color-acento: #ecc440;
@@ -13,25 +13,25 @@
 }
 
 /* Html */
-html{
+html {
   scroll-behavior: smooth;
 }
 
 /* Body */
-body{
-  font-family:"Cormorant Garamond", serif;
+body {
+  font-family: "Cormorant Garamond", serif;
   background-color: aliceblue;
-  color:black;
+  color: black;
   transition: 0.3s;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
 
 /* ===== Encabezado ===== */
-header{
+header {
   background-color: var(--color-fondo);
   color: var(--color-acento);
 }
@@ -57,7 +57,7 @@ header{
 }
 
 .nav-derecho {
-  justify-content:flex;
+  justify-content: flex;
 }
 
 .nav-principal,
@@ -135,20 +135,20 @@ header{
 }
 
 .boton {
-font-family: var(--fuente-titulo);
-background-color: var(--color-fondo);
-color: var(--color-acento);
-border: 1px solid var(--color-fondo);
-padding: 0.65rem 1.5rem;
-border-radius: 4px;
-cursor: pointer;
-transition: 0.2s ease;
+  font-family: var(--fuente-titulo);
+  background-color: var(--color-fondo);
+  color: var(--color-acento);
+  border: 1px solid var(--color-fondo);
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .boton:hover {
-background-color: var(--color-acento);
-color: var(--color-fondo);
-border-color: var(--color-acento);
+  background-color: var(--color-acento);
+  color: var(--color-fondo);
+  border-color: var(--color-acento);
 }
 
 /* Nueva colección */
@@ -161,7 +161,9 @@ border-color: var(--color-acento);
   min-height: 420px;
   padding: 4rem;
   color: #fff;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("https://media.gq.com.mx/photos/678ef8f1a2336bb0aa061e3d/master/w_1600%2Cc_limit/TAG_Heuer_Carrera_Chronograph_morado.jpg");
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("https://media.gq.com.mx/photos/678ef8f1a2336bb0aa061e3d/master/w_1600%2Cc_limit/TAG_Heuer_Carrera_Chronograph_morado.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -182,21 +184,21 @@ border-color: var(--color-acento);
 
 /* Más vendidos */
 .mas-vendidos {
-padding: 3rem 0;
-text-align: center;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .mas-vendidos .titulo {
-font-size: 2.2rem;
-margin-bottom: 2rem;
-color: #ecc440;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ecc440;
 }
 
 .productos {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 1.5rem;
-text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
 }
 
 .tarjeta-producto {
@@ -228,7 +230,10 @@ text-align: left;
   padding: 0.4rem 1rem;
   font-size: 0.8rem;
   opacity: 0;
-  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .tarjeta-producto__imagen:hover .boton--pequeno {
@@ -302,6 +307,175 @@ text-align: left;
   font-size: 0.85rem;
 }
 
+/* login y registro */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url(../imagenes/imagen1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.contenedor__todo {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.caja__trasera {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(67, 77, 87, 0.5);
+}
+
+.caja__trasera div {
+  margin: 100px 40px;
+  color: white;
+  transition: all 500ms;
+}
+
+.caja__trasera div p,
+.caja__trasera button {
+  margin-top: 30px;
+}
+
+.caja__trasera div h3 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.caja__trasera div p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.caja__trasera button {
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  transition: all 300ms;
+}
+
+.caja__trasera button:hover {
+  background: #fff;
+  color: #3b434b;
+}
+
+/*Formularios*/
+
+.contenedor__login-register {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+
+  /*La transicion va despues del codigo JS*/
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contenedor__login-register form {
+  width: 100%;
+  padding: 80px 20px;
+  background: white;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.contenedor__login-register form h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3b434b;
+}
+
+.contenedor__login-register form input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+  outline: none;
+}
+
+.contenedor__login-register form button {
+  padding: 10px 40px;
+  margin-top: 40px;
+  border: none;
+  font-size: 14px;
+  background: #3b434b;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+.formulario__login {
+  opacity: 1;
+  display: block;
+}
+.formulario__register {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  main {
+    margin-top: 50px;
+  }
+
+  .caja__trasera {
+    max-width: 350px;
+    height: 300px;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .caja__trasera div {
+    margin: 0px;
+    position: absolute;
+  }
+
+  /*Formularios*/
+
+  .contenedor__login-register {
+    top: -10px;
+    left: -5px;
+    margin: auto;
+  }
+
+  .contenedor__login-register form {
+    position: relative;
+  }
+}
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .encabezado {
@@ -349,7 +523,7 @@ text-align: left;
   border: none;
   font-size: 1.1em;
   padding: 0.5em 20px;
-  background: linear-gradient(#006d46,#006d46);
+  background: linear-gradient(#006d46, #006d46);
   color: #006d46;
   box-shadow:
     5px 5px 5px rgba(0, 0, 0, 0.1),
@@ -367,7 +541,7 @@ text-align: left;
 .campoBuscar input:hover::placeholder,
 .campoBuscar input:hover {
   border: none;
-  color:aliceblue;
+  color: aliceblue;
 }
 
 .iconoBusqueda {

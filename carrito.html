@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tipografía externa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Tu carrito | Deluxe Store</title>
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="Nav-izquierdo">
+            <div class="campo-buscar">
+                <input type="text" placeholder="Buscar productos..." aria-label="Buscar productos">
+                <i class="bi bi-search icono-busqueda"></i>
+            </div>
+
+            <nav class="nav-principal">
+                <a href="#Inicio">Inicio</a>
+                <a href="#Nuevo">Nuevo</a>
+            </nav>
+        </div>
+
+        <a href="#Inicio" class="Nombre">DELUXE STORE</a>
+
+        <div class="Nav-derecho">
+            <nav class="Nav principal">
+                <a href="#Catalogo">Catálogo</a>
+                <a href="#Sobre Nosotros">Sobre nosotros</a>
+            </nav>
+
+            <a href="#Carrito">
+                    <i class="bi bi-cart-check"></i>
+                    <span>Carrito</span>
+            </a>
+
+            <a href="#Perfil">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Perfil</span>
+            </a>
+        </div>
+
+    </header>
+
+    
+    <button type="button" class="boton-chatbot" aria-label="Abrir chatbot">
+        <i class="bi bi-chat-dots"></i>
+        <span>Chatbot</span>
+    </button>
+
+   
+    <main class="contenido-carrito">
+
+        <h1 class="titulo-carrito">TU CARRITO</h1>
+
+        <div class="carrito-layout">
+
+            
+            <section class="carrito-lista" aria-label="Productos en el carrito">
+
+                <article class="carrito-item" data-id="1">
+                    <div class="carrito-item-imagen">
+                        <img src="" alt="Nombre del producto">
+                    </div>
+
+                    <div class="carrito-item-info">
+                        <h2 class="carrito-item-nombre">Nombre del producto</h2>
+                        <p class="carrito-item-descripcion">Descripción corta del producto</p>
+
+                        <div class="carrito-item-acciones">
+                            <div class="selector-cantidad" role="group" aria-label="Cantidad">
+                                <button type="button" class="cantidad-menos" aria-label="Disminuir cantidad">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <span class="cantidad-valor" aria-live="polite">1</span>
+                                <button type="button" class="cantidad-mas" aria-label="Aumentar cantidad">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+
+                            <button type="button" class="boton-eliminar">
+                                <i class="bi bi-trash3"></i>
+                                <span>Eliminar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="carrito-item-precios">
+                        <span class="precio-antes">Precio antes</span>
+                        <span class="precio-actual">Precio</span>
+                    </p>
+                </article>
+
+                <article class="carrito-item" data-id="2">
+                    <div class="carrito-item-imagen">
+                        <img src="" alt="Nombre del producto">
+                    </div>
+
+                    <div class="carrito-item-info">
+                        <h2 class="carrito-item-nombre">Nombre del producto</h2>
+                        <p class="carrito-item-descripcion">Descripción corta del producto</p>
+
+                        <div class="carrito-item-acciones">
+                            <div class="selector-cantidad" role="group" aria-label="Cantidad">
+                                <button type="button" class="cantidad-menos" aria-label="Disminuir cantidad">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <span class="cantidad-valor" aria-live="polite">1</span>
+                                <button type="button" class="cantidad-mas" aria-label="Aumentar cantidad">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+
+                            <button type="button" class="boton-eliminar">
+                                <i class="bi bi-trash3"></i>
+                                <span>Eliminar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="carrito-item-precios">
+                        <span class="precio-antes">Precio antes</span>
+                        <span class="precio-actual">Precio</span>
+                    </p>
+                </article>
+
+                <article class="carrito-item" data-id="3">
+                    <div class="carrito-item-imagen">
+                        <img src="" alt="Nombre del producto">
+                    </div>
+
+                    <div class="carrito-item-info">
+                        <h2 class="carrito-item-nombre">Nombre del producto</h2>
+                        <p class="carrito-item-descripcion">Descripción corta del producto</p>
+
+                        <div class="carrito-item-acciones">
+                            <div class="selector-cantidad" role="group" aria-label="Cantidad">
+                                <button type="button" class="cantidad-menos" aria-label="Disminuir cantidad">
+                                    <i class="bi bi-dash"></i>
+                                </button>
+                                <span class="cantidad-valor" aria-live="polite">1</span>
+                                <button type="button" class="cantidad-mas" aria-label="Aumentar cantidad">
+                                    <i class="bi bi-plus"></i>
+                                </button>
+                            </div>
+
+                            <button type="button" class="boton-eliminar">
+                                <i class="bi bi-trash3"></i>
+                                <span>Eliminar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="carrito-item-precios">
+                        <span class="precio-antes">Precio antes</span>
+                        <span class="precio-actual">Precio</span>
+                    </p>
+                </article>
+
+            </section>
+
+            <aside class="resumen-pedido" aria-labelledby="titulo-resumen">
+
+                <h2 id="titulo-resumen" class="resumen-titulo">Resumen del pedido</h2>
+
+                <dl class="resumen-detalle">
+                    <div class="resumen-fila">
+                        <dt>Subtotal</dt>
+                        <dd id="resumen-subtotal">$----</dd>
+                    </div>
+
+                    <div class="resumen-fila resumen-descuento">
+                        <dt>Descuento aplicado</dt>
+                        <dd id="resumen-descuento">-$----</dd>
+                    </div>
+
+                    <div class="resumen-fila">
+                        <dt>Envío estimado</dt>
+                        <dd id="resumen-envio">Gratis</dd>
+                    </div>
+                </dl>
+
+                <div class="resumen-fila resumen-total">
+                    <span>Total</span>
+                    <span id="resumen-total">$---</span>
+                </div>
+
+                <a href="pago.html" class="boton-pagar">Proceder al pago</a>
+
+                <a href="catalogo.html" class="boton-continuar">Continuar comprando</a>
+
+                <p class="resumen-seguro">
+                    <i class="bi bi-lock"></i>
+                    <span>Pago seguro SSL encriptado</span>
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer class="pie-pagina">
+
+        <div class="pie-marca">
+            <a href="index.html" class="nombre-tienda">DELUXE STORE</a>
+
+            <div class="redes-sociales">
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            </div>
+        </div>
+
+        <ul class="pie-enlaces">
+            <li><a href="informacion-legal.html">Información legal</a></li>
+            <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+            <li><a href="politicas-privacidad.html">Políticas de privacidad</a></li>
+            <li><a href="politica-envios.html">Política de envíos</a></li>
+            <li><a href="cambios-devoluciones.html">Cambios y devoluciones</a></li>
+        </ul>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="carrito.js"></script>
+
+</body>
+</html>
