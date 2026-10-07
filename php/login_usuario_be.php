@@ -6,7 +6,7 @@ $correo = $_POST['correo'];
 $contrasena = $_POST['contrasena'];
 echo $contrasena;
 
-$query = "SELECT * FROM usuarios WHERE correo = '$correo'";
+$query = "SELECT * FROM usuario WHERE correo = '$correo'";
 
 $resultado = mysqli_query($conexion, $query);
 

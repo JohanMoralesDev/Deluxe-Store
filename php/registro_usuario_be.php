@@ -26,7 +26,7 @@ $contrasena      = trim($_POST['contrasena']);
 $contrasena_hashed = password_hash($contrasena, PASSWORD_DEFAULT);
 
 // Verificar si el correo ya existe
-$verificar_correo = mysqli_query($conexion, "SELECT id FROM usuarios WHERE correo='$correo' LIMIT 1");
+$verificar_correo = mysqli_query($conexion, "SELECT id_usuario FROM usuario WHERE correo='$correo' LIMIT 1");
 
 if (mysqli_num_rows($verificar_correo) > 0) {
     echo '          
@@ -39,7 +39,7 @@ if (mysqli_num_rows($verificar_correo) > 0) {
 }
 
 // Insertar el usuario
-$query = "INSERT INTO usuarios(nombre_completo, correo, usuario, contrasena) 
+$query = "INSERT INTO usuario(nombre_completo, correo, usuario, contrasena) 
           VALUES('$nombre_completo', '$correo', '$usuario', '$contrasena_hashed')";
 
 $ejecutar = mysqli_query($conexion, $query);
