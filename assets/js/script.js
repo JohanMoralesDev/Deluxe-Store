@@ -7,7 +7,7 @@ if (botonAbrirBuscador && campoBuscar) {
 
     if (campoBuscar.classList.contains("activo")) {
       const input = campoBuscar.querySelector("input");
-      if (inpuBuscar) inputBuscar.focus();
+      if (input) input.focus();
     }
   });
 }
@@ -66,9 +66,31 @@ document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
   });
 });
 
-//Ejecutando funciones
-document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
-document.getElementById("btn__registrarse").addEventListener("click", register);
+// Menú responsive (hamburguesa): muestra/oculta las opciones del menú
+const menuToggle = document.querySelector(".menu-toggle");
+const encabezado = document.querySelector(".encabezado");
+
+if (menuToggle && encabezado) {
+  menuToggle.addEventListener("click", () => {
+    const abierto = encabezado.classList.toggle("menu-abierto");
+    menuToggle.setAttribute("aria-expanded", String(abierto));
+  });
+
+  // Al elegir una opción se vuelve a ocultar el menú
+  encabezado.querySelectorAll(".nav-derecho a").forEach((enlace) => {
+    enlace.addEventListener("click", () => {
+      encabezado.classList.remove("menu-abierto");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+//Ejecutando funciones (solo aplica en la página de login)
+const btnIniciarSesion = document.getElementById("btn__iniciar-sesion");
+const btnRegistrarse = document.getElementById("btn__registrarse");
+
+if (btnIniciarSesion) btnIniciarSesion.addEventListener("click", iniciarSesion);
+if (btnRegistrarse) btnRegistrarse.addEventListener("click", register);
 window.addEventListener("resize", anchoPage);
 
 //Declarando variables
@@ -81,6 +103,9 @@ var caja_trasera_register = document.querySelector(".caja__trasera-register");
     //FUNCIONES
 
 function anchoPage(){
+
+    // Fuera de la página de login no existe el formulario: evitamos el error
+    if (!caja_trasera_register || !caja_trasera_login || !formulario_login || !contenedor_login_register) return;
 
     if (window.innerWidth > 850){
         caja_trasera_register.style.display = "block";
